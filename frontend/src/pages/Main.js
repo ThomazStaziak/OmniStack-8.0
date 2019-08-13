@@ -68,7 +68,7 @@ export default function Main({ match }) {
         </Link>
         { users.length > 0 ? (
             <ul>
-                {users.map(user => (
+                {users.sort(() => Math.random() - 0.5).map(user => (
                     <li key={user._id}>
                         <img src={user.avatar} alt={user.name} />
                         <footer>
